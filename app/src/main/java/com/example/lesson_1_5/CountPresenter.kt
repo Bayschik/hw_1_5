@@ -15,14 +15,11 @@ class CountPresenter(private val counterView: CounterView) {
         }else if (model.count > 15){
             counterView.blackTextColor()
         }
-
-        // if(model.count == 10){
-        //  counterView.showToast()
-        // }
     }
     fun decrement(){
         model.decrement()
         counterView.showChangeCount(model.count)
+
         if (model.count == 10){
             counterView.showToast()
         }else if (model.count == 15){
@@ -30,10 +27,6 @@ class CountPresenter(private val counterView: CounterView) {
         }else if (model.count < 15){
             counterView.blackTextColor()
         }
-
-        // if(model.count == 10){
-        //          counterView.showToast()
-        // }
     }
 
 }
